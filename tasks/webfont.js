@@ -122,7 +122,8 @@ module.exports = function(grunt) {
 		else {
 			var codepointIdx = o.startCodepoint;
 			o.codepoints = o.glyphs.map(function(name) {
-				return parseInt((codepointIdx++).toString(16),16);
+                grunt.log.writeln(name + 'codepoint');
+				return (codepointIdx++).toString(16);
 			});
 		}
 
