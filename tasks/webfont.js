@@ -120,9 +120,8 @@ module.exports = function(grunt) {
 			});
 		}
 		else {
-			var codepointIdx = o.startCodepoint;
+			var codepointIdx = parseInt(o.startCodepoint,16);
 			o.codepoints = o.glyphs.map(function(name) {
-                grunt.log.writeln(name + 'codepoint');
 				return (codepointIdx++).toString(16);
 			});
 		}
