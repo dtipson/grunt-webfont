@@ -54,7 +54,7 @@
     </head>
     <body>
         <h1><%= fontBaseName %></h1>
-
+        <div style="font-family:'<%= fontBaseName %>';font-size:80px;"><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>&#x<%= codepoints[glyphIdx] %>;<% } %></div>
         <div class="icons" id="icons">
             <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
                 <div class="icons__item" data-seq="<%= codepoints[glyphIdx] %>" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i> <%= classPrefix %><%= glyph %> <i class="<%= baseClass %>">&#x<%= codepoints[glyphIdx] %>;</i></div>
